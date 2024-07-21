@@ -1,0 +1,27 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+// Endpoint to filter and search traders
+app.get('/api/traders', (req, res) => {
+    // Logic to filter traders
+    res.json([]);
+});
+
+// Endpoint to retrieve leaderboard data
+app.get('/api/leaderboard', (req, res) => {
+    // Logic to get leaderboard data
+    res.json([]);
+});
+
+// Endpoint to handle staking transactions
+app.post('/api/stake', (req, res) => {
+    // Logic to handle staking
+    res.json({ success: true });
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
